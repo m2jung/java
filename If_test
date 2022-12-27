@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class If_8 {
+
+	public static void main(String[] args) {
+		
+		// 물품의 크기와 무게에 따라서 사용 가능한 카트를 알려주는 코드를 작성하세요
+	      // - 크기             무게             cart
+	      //   small            50kg 미만        cart-A
+	      //   small            50kg 이상        cart-B
+	      //   large            50kg 미만        cart-C
+	      //   large            50kg 이상        cart-D
+	
+    Scanner scanner = new Scanner(System.in );
+				
+		String size = "";
+		double weight = 0;
+		String cart = "";
+		
+		// 먼저 타입의 변수 값을 0으로 지정해준다.
+
+		System.out.print("물품 크기 입력 > ");
+		size = scanner.next();
+
+		if(size.equals("small") || size.equals("large")) {
+		// 입력값을 small or large로만 입력할 수 있게 설정
+		// 틀리면 else로 입력값 오류 설정. 맞으면 무게입력
+			
+			System.out.print("물품 무게 입력 > ");
+			weight = scanner.nextDouble();
+			//맨 위에 double 실수형으로 weight = 0 으로 설정 해놓
+			
+			if(size.equals("small")) {
+				if(weight < 50)
+					cart = "cart-A";
+				else
+					cart = "cart-B";
+			} else {
+				if(weight < 50)
+					cart = "cart-C";
+				else
+					cart = "cart-D";
+			}
+			System.out.println(cart + " 사용하세요");
+			//미리 String으로 빈 cart 변수를 만들어 출력문은 간결하게 
+			
+		} else {
+			System.out.println("크기 오류입니다.");
+		}
+
+		}
+
+		}
