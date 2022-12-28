@@ -1,0 +1,86 @@
+public class For {
+
+	public static void main(String[] args) {
+		
+		
+/*
+ 	: 조건을 만족하는 동안 괄호안의 문장을 반복한다.
+ 	: 거짓이면 false -> for문의 전체에서 벗어난다.
+ 	: 반복 횟수를 알 때 적합하다.
+ 
+  for (조건식) {
+  		{  
+*/
+		
+		
+		// 기본
+		// i 는 1이고 10미만이며 1씩 증가한다.
+		for (int i=1; i<10; i++) {
+			System.out.print('*');
+		} 			
+		
+		
+		// 중첩for문 이중으로 for문을 수행한다.
+		// for문 안에 for문이 먼저 수행된다. 두 for문이 수행될때 println 출력.
+		
+		// 5*5 별 찍기
+		for (int i=0; i<5; i++) {
+		 for (int j=0; j<5; j++) {
+			 System.out.print('*');
+		}
+		 	System.out.println();}
+		
+		
+		
+		// 구구단 코드
+		// i = 2단부터 j 1을  1++ 씩 곱했다.
+		
+		for (int i=2; i< 10; i++) {
+			for (int j=1; j<10; j++) {
+				System.out.println(i + "*"+ j + "=" + (i*j) );
+			}
+			System.out.println();
+		} 
+		
+		
+		
+// {}꼭 신경써서 print하기 ㅠㅠ
+		
+		// 1~30까지 n의 배수 찾아보기 (i++)1씩 증가하며 범위 안의 값을 모두 확인)
+		
+		int n = 7; 
+		
+		for(int i=1; i<=30; i++) {
+			if(i%n == 0) { 
+				System.out.println(i);
+			}
+		}
+		//for문 i조건식에 맞게 반복하는데 n으로 나눈 몫이 0 i를 프린트하라.
+		
+		
+		
+		
+	  // 1 ~ 50 사이의 3과 7의 배수를 출력하고, 각각의 배수의 합을 구하는 코드를 작성하세요
+	  // 단, 3의 배수이면서 7의 배수도 되는 수는 한번만 출력되어야 합니다
+		
+		  int three = 0;
+	      int seven = 0;
+	      for(int i=1 ; i<=50 ; i++) {
+	         if(i%3 == 0 && i%7 == 0) {
+	            System.out.println(i + " : 3 and 7의 배수" ); 
+	            three += i;
+	            seven += i; 
+	         } else if(i%3 == 0) {
+	            System.out.println(i + " : 3의 배수");
+	            three += i;
+	         } else if(i%7 == 0) {
+	            System.out.println(i + " : 7의 배수");
+	            seven += i;
+	         }
+	      }
+	      System.out.println("3의 배수 합 : " + three);
+	      System.out.println("7의 배수 합 : " + seven);
+		
+
+		
+	}}//main 끝 
